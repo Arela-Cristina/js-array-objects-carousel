@@ -1,4 +1,4 @@
-let miniContainer = document.getElementsByClassName('cover');
+let miniContainer = document.getElementById('miniContainer');
 console.log('Sono il mini Container', miniContainer)
 
 const images = [
@@ -33,6 +33,6 @@ const images = [
 //Come nel primo carosello realizzato, focalizziamoci prima sulla creazione del markup statico: costruiamo il container e inseriamo l’immagine grande in modo da poter stilare lo slider.
 images.forEach((image) => {
     console.log(image.image);
-    miniContainer.innerHTML += image.image;
+    miniContainer.innerHTML += `<img class='cover' src="${image.image}"></img>`;
 
 })
