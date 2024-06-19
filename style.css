@@ -15,7 +15,7 @@ section {
     width: 500px;
     height: 300px;
     object-fit: cover;
-    display: block;
+    display: flex;
     position: relative;
     /*debug*/
     background-color: yellowgreen;
@@ -25,6 +25,8 @@ section {
     width: 500px;
     height: 300px;
     object-fit: cover;
+    /*modifica*/
+    display: none;
 }
 
 .caption {
@@ -55,6 +57,7 @@ section {
     height: calc(100% / 5);
     object-fit: cover;
     display: block;
+    
 }
 
 #up {
