@@ -1,6 +1,11 @@
 let miniContainer = document.getElementById('miniContainer');
 console.log('Sono il mini Container', miniContainer)
 
+const upButton = document.getElementById('up');
+const downButton = document.getElementById('down');
+
+console.log(upButton, downButton);
+
 const images = [
     {
         image: 'img/01.webp',
@@ -35,4 +40,5 @@ images.forEach((image) => {
     console.log(image.image);
     miniContainer.innerHTML += `<img class='cover' src="${image.image}"></img>`;
 
-})
+});
+
