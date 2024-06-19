@@ -43,20 +43,31 @@ images.forEach((image) => {
 
 });
 
-// images.map((image) => {
-//     console.log(image.image);
-//     container.innerHTML += `<img id="container" src="${image.image}"></img>`;
-
-// });
-
 const mainImage = images.map((element) => {
-    container.innerHTML += `<img id="container"  src="${element.image}"></img> <div class="caption"><div>${element.title}</div> <div>${element.text}</div> </div>`;
+    container.innerHTML += `<div id="container">
+                                <img  class="styleImg" src="${element.image}"></img> 
+                                <div class="caption">
+                                    <div>${element.title}</div> 
+                                    <div>${element.text}</div>
+                                </div>
+                            </div>`;
 });
 
-//Ora rimuoviamo i contenuti statici e usiamo l’array di oggetti letterali per popolare dinamicamente il carosello.   Al click dell’utente sulle frecce verso sinistra o destra, l’immagine attiva diventerà visibile e dovremo aggiungervi titolo e testo.
+//una volta che abbiamo poppolato dinamicamente il carosello.   Al click dell’utente sulle frecce verso sinistra o destra, l’immagine attiva diventerà visibile e dovremo aggiungervi titolo e testo.
 
 let counter = 0;
 
-upButton.addEventListener('click', myFunction);
+// upButton.addEventListener('click', myFunction(){;
+// //facciamo andare gli uno svg  tra altro, facendo  click
+// upButton.addEventListener('click',
+//     function () {
+//         if (activeitem < immaginiContainer.length -1) {
+//             immaginiContainer[activeitem].classList.remove('active');
 
+//             activeitem++
+//             console.log(immaginiContainer)
 
+//             //assegniamo la clase active ad ogni elemento in maniera che appare uno alla volta.
+//             immaginiContainer[activeitem].classList.add('active');
+//         }
+//     });
