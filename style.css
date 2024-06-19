@@ -14,6 +14,8 @@ section {
 #container {
     width: 500px;
     height: 300px;
+    object-fit: cover;
+    display:block;
     /*debug*/
     background-color: yellowgreen;
 }
@@ -24,7 +26,7 @@ section {
     position: relative;
     /*debug*/
     background-color: coral;
-    
+
 
 }
 
@@ -63,4 +65,12 @@ section {
     cursor: pointer;
     /*debug*/
     background-color: #E91E63;
+}
+
+.active {
+    display: block;
+}
+
+.none {
+    display: none;
 }
