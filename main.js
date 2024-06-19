@@ -1,3 +1,6 @@
+let miniContainer = document.getElementsByClassName('cover');
+console.log('Sono il mini Container', miniContainer)
+
 const images = [
     {
         image: 'img/01.webp',
@@ -25,3 +28,11 @@ const images = [
         text: 'Marvel\'s Avengers is an epic, third-person, action-adventure game that combines an original, cinematic story with single-player and co-operative gameplay.',
     }
 ];
+
+//Milestone 0:
+//Come nel primo carosello realizzato, focalizziamoci prima sulla creazione del markup statico: costruiamo il container e inseriamo l’immagine grande in modo da poter stilare lo slider.
+images.forEach((image) => {
+    console.log(image.image);
+    miniContainer.innerHTML += image.image;
+
+})
