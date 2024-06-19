@@ -2,10 +2,7 @@ let container = document.getElementById('container');
 let miniContainer = document.getElementById('miniContainer');
 console.log('Sono il mini Container', miniContainer)
 
-const upButton = document.getElementById('up');
-const downButton = document.getElementById('down');
 
-console.log(upButton, downButton);
 
 const images = [
     {
@@ -55,19 +52,62 @@ const mainImage = images.map((element) => {
 
 //una volta che abbiamo poppolato dinamicamente il carosello.   Al click dell’utente sulle frecce verso sinistra o destra, l’immagine attiva diventerà visibile e dovremo aggiungervi titolo e testo.
 
-let counter = 0;
+//selezzionammo ogni foto grande
+let mainCover = document.getElementsByClassName('styleImg');
+mainCover[0].classList.add('active');
+console.log('Ciao sono io il', mainCover[0]);
 
-// upButton.addEventListener('click', myFunction(){;
-// //facciamo andare gli uno svg  tra altro, facendo  click
-// upButton.addEventListener('click',
-//     function () {
-//         if (activeitem < immaginiContainer.length -1) {
-//             immaginiContainer[activeitem].classList.remove('active');
+//selezzionammo ogni cover foto piccola
+let elementCover = document.getElementsByClassName('cover');
+elementCover[0].classList.add('active');
+console.log('Ciao sono io il', elementCover[0]);
 
-//             activeitem++
-//             console.log(immaginiContainer)
 
-//             //assegniamo la clase active ad ogni elemento in maniera che appare uno alla volta.
-//             immaginiContainer[activeitem].classList.add('active');
-//         }
-//     });
+
+//aggiungiamo un contatore
+let counter = parseInt(0);
+
+const upButton = document.getElementById('up');
+console.log('Sono il chevron', upButton);
+
+//Diamo la funzione click ad uppButton facciamo andare  uno svg  tra altro, facendo  click
+
+upButton.addEventListener('click',
+    function () {
+        if (counter < elementCover.length - 1) {
+            mainCover[counter].classList.remove('active');
+            elementCover[counter].classList.remove('active');
+
+
+            counter++
+
+            //assegniamo la clase active ad ogni elemento in maniera che appare uno alla volta.
+            mainCover[counter].classList.add('active');
+            elementCover[counter].classList.add('active');
+
+        }
+        console.log('stringa');
+    });
+
+
+//Diamo la funzione click  a down button facciamo andare  uno svg  tra altro, facendo  click
+const downButton = document.getElementById('down');
+console.log('Sono il chevron', downButton);
+
+downButton.addEventListener('click',
+    function () {
+        if (counter > 0) {
+            mainCover[counter].classList.remove('active');
+            elementCover[counter].classList.remove('active');
+
+
+            counter--
+            console.log(elementCover)
+
+            //assegniamo la clase active ad ogni elemento in maniera che appare uno alla volta.
+            mainCover[counter].classList.add('active');
+            elementCover[counter].classList.add('active');
+
+
+        }
+    });
