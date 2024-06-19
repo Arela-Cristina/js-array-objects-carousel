@@ -1,3 +1,4 @@
+let container = document.getElementById('container');
 let miniContainer = document.getElementById('miniContainer');
 console.log('Sono il mini Container', miniContainer)
 
@@ -41,4 +42,19 @@ images.forEach((image) => {
     miniContainer.innerHTML += `<img class='cover' src="${image.image}"></img>`;
 
 });
+
+images.forEach((image) => {
+    console.log(image.image);
+    container.innerHTML += `<img id="container" src="${image.image}"></img>`;
+
+});
+
+
+
+//Ora rimuoviamo i contenuti statici e usiamo l’array di oggetti letterali per popolare dinamicamente il carosello.   Al click dell’utente sulle frecce verso sinistra o destra, l’immagine attiva diventerà visibile e dovremo aggiungervi titolo e testo.
+
+// let counter = 0;
+
+// upButton.addEventListener('click', myFunction);
+
 
