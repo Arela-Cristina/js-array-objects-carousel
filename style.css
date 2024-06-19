@@ -15,9 +15,24 @@ section {
     width: 500px;
     height: 300px;
     object-fit: cover;
-    display:block;
+    display: block;
+    position: relative;
     /*debug*/
     background-color: yellowgreen;
+}
+
+
+.caption {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    color: white;
+    font-weight: bolder;
+    font-size: 10px;
+    position: absolute;
+    bottom: 5%;
+    width: 90%;
+    left: 5%;
 }
 
 #miniContainer {
